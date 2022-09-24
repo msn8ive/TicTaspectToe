@@ -92,8 +92,7 @@ public class TicTacToe {
                         
         }
 
-    
-    
+        
     public static int chkWinner() {
     	//referee
         List topRow = Arrays.asList(1, 2, 3);
@@ -122,9 +121,10 @@ public class TicTacToe {
                 return 1;
             } else if (player2Positions.containsAll(l)) {
                 return 2;
-            } else if (player1Positions.size() + player2Positions.size() == 9) {
-                return 3;
-            }
+            } 
+        }
+        if (player1Positions.size() + player2Positions.size() == 9) {
+            return 3;
         }
      return 4;
     }
