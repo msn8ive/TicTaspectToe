@@ -48,8 +48,9 @@ public class TicTacToe {
             //System.out.println(chkWinner());
             System.out.println(p1Name + ", enter your move (1-9):");
             int player1Pos = scan.nextInt();
-            while (player1Positions.contains(player1Pos) || player2Positions.contains(player1Pos)) {
-                System.out.println("Pick an empty square! Try again:");
+            while (player1Positions.contains(player1Pos) || player2Positions.contains(player1Pos) 
+            		|| player1Pos > 9 ) {
+                System.out.println("Invalid choice! Try again:");
                 player1Pos = scan.nextInt();
             }
             makeMove(board, player1Pos, "player1");
@@ -58,23 +59,15 @@ public class TicTacToe {
             printBoard(board);
 
 //Was that the winning move?
-			/*
-			 * if (chkWinner() == 1){ System.out.println("");
-			 * System.out.println("TIC-TAC-TOE!!  " + p1Name + ", you won!"); break;
-			 * 
-			 * } else if (chkWinner() == 2) { System.out.println("");
-			 * System.out.println("TIC-TAC-TOE!!" + p2Name + ", you won!"); break; } else if
-			 * (chkWinner() == 3) { System.out.println("");
-			 * System.out.println("It's a tie! Try again!"); break; }
-			 */
+		
             refCheck(p1Name, p2Name);  
             
 
 //player2's turn
             System.out.println(p2Name + ", enter your move (1-9):");
             int player2Pos = scan.nextInt();
-            while (player1Positions.contains(player2Pos) || player2Positions.contains(player2Pos)) {
-                System.out.println("Pick an empty square! Try again:");
+            while (player1Positions.contains(player2Pos) || player2Positions.contains(player2Pos) || player2Pos > 9) {
+                System.out.println("Invalid choice! Try again:");
                 player2Pos = scan.nextInt();
             }
 
@@ -84,6 +77,8 @@ public class TicTacToe {
                 printBoard(board);
 
 //Was that the winning move?
+                
+            refCheck(p1Name, p2Name); 
 				/*
 				 * if (chkWinner() == 1){ System.out.println("");
 				 * System.out.println("TIC-TAC-TOE!! " + p1Name + ", you won!"); break; } else
@@ -92,14 +87,12 @@ public class TicTacToe {
 				 * if (chkWinner() == 3) { System.out.println("");
 				 * System.out.println("It's a tie! Try again!"); break; }
 				 */
-             refCheck(p1Name, p2Name);   
-
+            
             }
-        
-        
-        
+                        
         }
 
+    
     
     public static int chkWinner() {
     	//referee
