@@ -1,3 +1,4 @@
+package mcCool.ticTaspectJoe;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -129,13 +130,14 @@ public class TicTacToe {
      return 4;
     }
 
-    public static void printBoard(char[][] board) {
+    public static char[][] printBoard(char[][] board) {
             for (char[] row : board) {
                 for (char c : row) {
                     System.out.print(c);
                 }
                 System.out.println();
             }
+            return board;
         }
 
     public static void printInitialBoard(char[][] initialBoard) {
