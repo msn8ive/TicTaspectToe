@@ -4,11 +4,13 @@ import mcCool.ticTaspectJoe.*;
 
   public aspect referee {
   
-  pointcut stripes (): execution (* *.printBoard(char[][]));
+  pointcut stripes (): 
+	call (void TicTacToe.printBoard(char[][])) || 
+  	execution(int TicTacToe.refCheck(String, String));
   
-  after() returning (char[][] board): stripes(){
+  after() returning : stripes(){
 	  //TicTacToe.refCheck(p1Name, p2Name);
-	  System.out.println("Returned " + board);
+	  System.out.println("ASPECTTTTTTT YOOOO ");
   	} 
   }
  

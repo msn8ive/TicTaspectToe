@@ -92,7 +92,6 @@ public class TicTacToe {
             }
                         
         }
-
         
     public static int chkWinner() {
     	//referee
@@ -130,15 +129,14 @@ public class TicTacToe {
      return 4;
     }
 
-    public static char[][] printBoard(char[][] board) {
+    public static void printBoard(char[][] board) {
             for (char[] row : board) {
                 for (char c : row) {
                     System.out.print(c);
                 }
                 System.out.println();
             }
-            return board;
-        }
+          }
 
     public static void printInitialBoard(char[][] initialBoard) {
         for (char[] row : initialBoard) {
