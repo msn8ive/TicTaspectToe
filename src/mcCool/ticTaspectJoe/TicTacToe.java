@@ -60,8 +60,8 @@ public class TicTacToe {
             printBoard(board);
 
 //Was that the winning move?
-		
-            refCheck(p1Name, p2Name);  
+            chkWinner();
+            //refCheck(p1Name, p2Name);  
             
 
 //player2's turn
@@ -79,7 +79,7 @@ public class TicTacToe {
 
 //Was that the winning move?
                 
-            refCheck(p1Name, p2Name); 
+           // refCheck(p1Name, p2Name); 
 				/*
 				 * if (chkWinner() == 1){ System.out.println("");
 				 * System.out.println("TIC-TAC-TOE!! " + p1Name + ", you won!"); break; } else
@@ -193,29 +193,18 @@ public class TicTacToe {
     }
     
     
-    public static int refCheck(String p1Name, String p2Name) {
-    	if (chkWinner() == 1){
-            System.out.println("");
-            System.out.println("TIC-TAC-TOE!!  " + p1Name + ", you won!");
-            System.out.println("Game Over!");
-            System.exit(0);
-            return 1;
-
-        } else if (chkWinner() == 2) {
-            System.out.println("");
-            System.out.println("TIC-TAC-TOE!!" + p2Name + ", you won!");
-            System.out.println("Game Over!");
-            System.exit(0);
-            return 2;
-        } else if (chkWinner() == 3) {
-            System.out.println("");
-            System.out.println("It's a tie! Try again!");
-            System.out.println("Game Over!");
-            System.exit(0);
-            return 3;
-        }
-    	return 4;
-    }
+	/*
+	 * public static int refCheck(String p1Name, String p2Name) { if (chkWinner() ==
+	 * 1){ System.out.println(""); System.out.println("TIC-TAC-TOE!!  " + p1Name +
+	 * ", you won!"); System.out.println("Game Over!"); System.exit(0); return 1;
+	 * 
+	 * } else if (chkWinner() == 2) { System.out.println("");
+	 * System.out.println("TIC-TAC-TOE!!" + p2Name + ", you won!");
+	 * System.out.println("Game Over!"); System.exit(0); return 2; } else if
+	 * (chkWinner() == 3) { System.out.println("");
+	 * System.out.println("It's a tie! Try again!");
+	 * System.out.println("Game Over!"); System.exit(0); return 3; } return 4; }
+	 */
 
 }
 
