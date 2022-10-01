@@ -95,16 +95,16 @@ public class TicTacToe {
         
     public static int chkWinner() {
     	//referee
-        List topRow = Arrays.asList(1, 2, 3);
-        List midRow = Arrays.asList(4, 5, 6);
-        List lastRow = Arrays.asList(7, 8, 9);
+        List<Integer> topRow = Arrays.asList(1, 2, 3);
+        List<Integer> midRow = Arrays.asList(4, 5, 6);
+        List<Integer> lastRow = Arrays.asList(7, 8, 9);
 
-        List leftClmn = Arrays.asList(1, 4, 7);
-        List midClmn = Arrays.asList(2, 5, 8);
-        List rtClmn = Arrays.asList(3, 6, 9);
+        List<Integer> leftClmn = Arrays.asList(1, 4, 7);
+        List<Integer> midClmn = Arrays.asList(2, 5, 8);
+        List<Integer> rtClmn = Arrays.asList(3, 6, 9);
 
-        List diag1 = Arrays.asList(1, 5, 9);
-        List diag2 = Arrays.asList(3, 5, 7);
+        List<Integer> diag1 = Arrays.asList(1, 5, 9);
+        List<Integer> diag2 = Arrays.asList(3, 5, 7);
 
         List<List> winConditions = new ArrayList<List>();
         winConditions.add(topRow);
@@ -116,7 +116,7 @@ public class TicTacToe {
         winConditions.add(diag1);
         winConditions.add(diag2);
 
-        for(List l : winConditions) {
+        for(List<?> l : winConditions) {
             if(player1Positions.containsAll(l)) {
                 return 1;
             } else if (player2Positions.containsAll(l)) {
@@ -189,7 +189,7 @@ public class TicTacToe {
             default:
                 break;
             }
-
+        
     }
     
     
